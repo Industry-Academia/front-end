@@ -9,6 +9,7 @@ export const Main = () => {
         <BannerTypo>배너 텍스트</BannerTypo>
       </Banner>
       <KakaoMap />
+      {/* 테스트 주석 */}
     </Root>
   );
 };
