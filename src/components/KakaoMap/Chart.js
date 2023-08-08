@@ -1,3 +1,4 @@
+import api from '../../api/axios';
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import styled from 'styled-components';
@@ -5,6 +6,10 @@ import { Chart as ChartJS, registerables } from 'chart.js';
 ChartJS.register(...registerables);
 
 const BarChart = () => {
+  api.get('/child').then((res) => {
+    console.log(res);
+  });
+
   const data = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
